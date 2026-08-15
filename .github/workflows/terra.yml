@@ -20,7 +20,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: environments/preprod
+        working-directory: terra-assignment
 
     steps:
       - name: Checkout code
@@ -33,14 +33,14 @@ jobs:
         run: |
           az login \
             --service-principal \
-            --username "9eac3105-2ec2-4f37-8b90-3d1d851fce11" \
-            --password "W4V8Q~NmAomNOfMjBrTUT.rcYDEUB8YgKRzAgduC" \
-            --tenant "0f7010fd-209e-4344-8457-043ffb37143b"
+            --username "e0001b1b-259b-40a0-b9bc-855bb91cf1f3" \
+            --password "747a49ef-6470-4def-9b57-0013d1286159" \
+            --tenant "ce1221be-2dd4-4dbd-be67-4765d692baf9"
 
       - name: Set Azure Subscription
         run: |
           az account set \
-            --subscription "bc9d2c5e-f99f-4142-8f22-8f6dae37180d"
+            --subscription "1901e74c-f287-4ad5-a027-7e82572afe7a"
 
       - name: Check Azure Login
         run: az account show
@@ -68,7 +68,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: environments/preprod
+        working-directory: terra-assignment
 
     steps:
       - name: Checkout code
@@ -81,14 +81,14 @@ jobs:
         run: |
           az login \
             --service-principal \
-            --username "9eac3105-2ec2-4f37-8b90-3d1d851fce11" \
-            --password "W4V8Q~NmAomNOfMjBrTUT.rcYDEUB8YgKRzAgduC" \
-            --tenant "0f7010fd-209e-4344-8457-043ffb37143b"
+            --username "e0001b1b-259b-40a0-b9bc-855bb91cf1f3" \
+            --password "747a49ef-6470-4def-9b57-0013d1286159" \
+            --tenant "ce1221be-2dd4-4dbd-be67-4765d692baf9"
 
       - name: Set Azure Subscription
         run: |
           az account set \
-            --subscription "bc9d2c5e-f99f-4142-8f22-8f6dae37180d"
+            --subscription "1901e74c-f287-4ad5-a027-7e82572afe7a"
 
       - name: Check Azure Login
         run: az account show
