@@ -20,7 +20,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: terra-assignment
+        working-directory: .
 
     steps:
       - name: Checkout code
@@ -68,7 +68,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: terra-assignment
+        working-directory: .
 
     steps:
       - name: Checkout code
