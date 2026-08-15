@@ -70,7 +70,8 @@ jobs:
           az login \
             --service-principal \
             --username "e0001b1b-259b-40a0-b9bc-855bb91cf1f3" \
-            --password "cow8Q~zOcBaB2hj6VbYTOk1Kd4yj.ZpAUaXOXa~R" \
+          --password "repo:vijaysony328-lgtm@287385064/terra-assignment@1335319544:ref:refs/heads/Main"/
+
             --tenant "ce1221be-2dd4-4dbd-be67-4765d692baf9"
 
       - name: Set Azure Subscription
