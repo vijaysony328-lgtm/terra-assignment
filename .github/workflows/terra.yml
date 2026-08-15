@@ -65,28 +65,19 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
-    #  - name: Azure Login
-     #   run: |
-      #    az login \
-       #     --service-principal \
-        #    --username "e0001b1b-259b-40a0-b9bc-855bb91cf1f3" \
-         #   --password "cow8Q~zOcBaB2hj6VbYTOk1Kd4yj.ZpAUaXOXa~R" \
-          #  --tenant "ce1221be-2dd4-4dbd-be67-4765d692baf9"
+      - name: Azure Login
+        run: |
+          az login \
+            --service-principal \
+            --username "e0001b1b-259b-40a0-b9bc-855bb91cf1f3" \
+            --password "cow8Q~zOcBaB2hj6VbYTOk1Kd4yj.ZpAUaXOXa~R" \
+            --tenant "ce1221be-2dd4-4dbd-be67-4765d692baf9"
 
-    #  - name: Set Azure Subscription
-    #    run: |
-     #     az account set \
-      #      --subscription "1901e74c-f287-4ad5-a027-7e82572afe7a"
-       - name: Azure Login
-        uses: azure/login@v2
-  with:
-    creds: |
-      {
-        "clientId": "${{ secrets.AZURE_CLIENT_ID }}",
-        "clientSecret": "${{ secrets.AZURE_CLIENT_SECRET }}",
-        "subscriptionId": "${{ secrets.AZURE_SUBSCRIPTION_ID }}",
-        "tenantId": "${{ secrets.AZURE_TENANT_ID }}"
-      }
+      - name: Set Azure Subscription
+        run: |
+          az account set \
+            --subscription "1901e74c-f287-4ad5-a027-7e82572afe7a"
+  
 
       - name: Check Azure Login
         run: az account show
