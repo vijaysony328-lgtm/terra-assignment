@@ -6,9 +6,15 @@ resource_names = {
         location = "East US"
     }
 
-     rg2={
+     rg3={
 
         name = "rg2_second_kit"
         location = "West US"
     }
+ rg2={
+        name = "rg2_kit"
+        location = "West US"
+    }
+
+
 }
